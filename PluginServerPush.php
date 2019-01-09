@@ -1,5 +1,11 @@
 <?php
 class PluginServerPush{
+  /**
+   * Push data to server and retrieve content.
+   * @param string $url
+   * @param array $data
+   * @return string
+   */
   public function push($url, $data){
     $postdata = http_build_query($data);
     $opts = array('http' => 
