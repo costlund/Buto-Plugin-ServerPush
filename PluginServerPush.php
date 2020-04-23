@@ -6,7 +6,8 @@ class PluginServerPush{
       array (
         'method' => 'POST',
         'header' => 'Content-type: application/x-www-form-urlencoded',
-        'content' => $postdata
+        'content' => $postdata,
+        'timeout' => 60*5
       )
     );
     $context  = stream_context_create($opts);
